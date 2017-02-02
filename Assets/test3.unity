@@ -1,0 +1,1938 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
+  m_LightmapEditorSettings:
+    serializedVersion: 4
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+  m_LightingDataAsset: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    accuratePlacement: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &1003273944 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1435788940761376, guid: ca6ddcb4b1dc9574f8a907a314e37be7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536796145}
+--- !u!114 &1003273948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003273944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf14f64c027b7045859b0fe7d2af8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salsa3D: {fileID: 0}
+  randomEyes3D: {fileID: 1003273950}
+  skinnedMeshRenderer: {fileID: 1879996495}
+  leftEyeName: lEye
+  leftEyeBone: {fileID: 1892088026}
+  rightEyeName: rEye
+  rightEyeBone: {fileID: 1837231101}
+  leftBlinkShapes: EyesClosedL,BlinkLeft,Blink_l
+  rightBlinkShapes: EyesClosedR,BlinkRight,Blink_r
+  leftBlinkIndex: 322
+  rightBlinkIndex: 321
+  leftBlinkShape: Genesis2Female__PHMEyesClosedL
+  rightBlinkShape: Genesis2Female__PHMEyesClosedR
+  saySmall:
+  - shapeIndex: 277
+    shapeName: Genesis2Female__VSMER
+    percentage: 10
+  - shapeIndex: 265
+    shapeName: Genesis2Female__VSMUW
+    percentage: 30
+  sayMedium:
+  - shapeIndex: 279
+    shapeName: Genesis2Female__VSMAA
+    percentage: 100
+  - shapeIndex: 291
+    shapeName: Genesis2Female__PHMMouthSmileOpen
+    percentage: 20
+  - shapeIndex: 292
+    shapeName: Genesis2Female__PHMMouthSmile
+    percentage: 40
+  - shapeIndex: 299
+    shapeName: Genesis2Female__PHMLipTopUpR
+    percentage: 40
+  - shapeIndex: 300
+    shapeName: Genesis2Female__PHMLipTopUpL
+    percentage: 40
+  sayLarge:
+  - shapeIndex: 266
+    shapeName: Genesis2Female__VSMTH
+    percentage: 60
+  - shapeIndex: 293
+    shapeName: Genesis2Female__PHMMouthOpenWide
+    percentage: 40
+  - shapeIndex: 294
+    shapeName: Genesis2Female__PHMMouthOpen
+    percentage: 60
+  shapeNames:
+  - Genesis2Female__SCLTorsoLength
+  - Genesis2Female__SCLShldrsWidth
+  - Genesis2Female__SCLShldrsScale
+  - Genesis2Female__SCLPalmScaleR
+  - Genesis2Female__SCLPalmScaleL
+  - Genesis2Female__SCLPalmScale
+  - Genesis2Female__SCLNeckLength
+  - Genesis2Female__SCLFingersWidthR
+  - Genesis2Female__SCLFingersWidthL
+  - Genesis2Female__SCLFingersWidth
+  - Genesis2Female__SCLFingersLengthR
+  - Genesis2Female__SCLFingersLengthL
+  - Genesis2Female__SCLFingersLength
+  - Genesis2Female__SCLChestWidth
+  - Genesis2Female__SCLChestDepth
+  - Genesis2Female__SCLArmsLength
+  - Genesis2Female__SCLPropagatingHead
+  - Genesis2Female__SCLPropagatingHandR
+  - Genesis2Female__SCLPropagatingHandL
+  - Genesis2Female__SCLPropagatingHand
+  - Genesis2Female__SCLPropagatingFootR
+  - Genesis2Female__SCLPropagatingFootL
+  - Genesis2Female__SCLPropagatingFoot
+  - Genesis2Female__SCLPropagatingChest
+  - Genesis2Female__CBMYoungerTeen
+  - Genesis2Female__CBMOlderTeen
+  - Genesis2Female__CBMAged2
+  - Genesis2Female__CBMAged1
+  - Genesis2Female__CBMAdult
+  - Genesis2Female__CBM5yearold
+  - Genesis2Female__CBM10yearold
+  - Genesis2Female__Youth_Weight
+  - Genesis2Female__Youth_Posture
+  - Genesis2Female__Youth_Morph
+  - Genesis2Female__Head_Proportion
+  - Genesis2Female__Neck_Weight
+  - Genesis2Female__Basic_Weight1
+  - Genesis2Female__Thin_Lips
+  - Genesis2Female__Teeth_Hide
+  - Genesis2Female__Shoulder_Drop
+  - Genesis2Female__Nose_Age
+  - Genesis2Female__Mouth_Sag
+  - Genesis2Female__Eyelid_Size
+  - Genesis2Female__Eye_Size
+  - Genesis2Female__Eye_Sag_Top
+  - Genesis2Female__Chin_Pointed
+  - Genesis2Female__Bulbous2
+  - Genesis2Female__Bulbous1
+  - Genesis2Female__Aged_Posture
+  - Genesis2Female__Aged_Posture_Smoother
+  - Genesis2Female__Aged_Body2
+  - Genesis2Female__Aged_Body1
+  - Genesis2Female__FHMGogo
+  - Genesis2Female__PHMDevilFangs
+  - Genesis2Female__PHMDevilEyes
+  - Genesis2Female__PBMDevilClaws
+  - Genesis2Female__FaeEars
+  - Genesis2Female__FHMCoral
+  - Genesis2Female__PBMWaistNarrowUpper
+  - Genesis2Female__PBMWaistNarrowLower
+  - Genesis2Female__PHMTemplesDefineR
+  - Genesis2Female__PHMTemplesDefineL
+  - Genesis2Female__PHMPupilsSlit
+  - Genesis2Female__PHMPupilsDialate
+  - Genesis2Female__PHMNostrilsWidthL
+  - Genesis2Female__PHMNoseWidth
+  - Genesis2Female__PHMNoseTipRound
+  - Genesis2Female__PHMNoseTipHeight
+  - Genesis2Female__PHMNoseSize
+  - Genesis2Female__PHMNoseRidgeWidth
+  - Genesis2Female__PHMNosePinch
+  - Genesis2Female__PHMNoseDepth
+  - Genesis2Female__PHMNoseBump
+  - Genesis2Female__PHMNoseBridgeSlope
+  - Genesis2Female__PHMNoseBridgeDepth
+  - Genesis2Female__PHMMouthWidth
+  - Genesis2Female__PHMMouthCurves
+  - Genesis2Female__PHMLipUpperSize
+  - Genesis2Female__PHMLipsSquare
+  - Genesis2Female__PHMLipsHeart
+  - Genesis2Female__PHMLipLowerDepth
+  - Genesis2Female__PHMLacrimalsPinch
+  - Genesis2Female__PHMJawLineDepth
+  - Genesis2Female__PHMJawHeightR
+  - Genesis2Female__PHMJawHeightL
+  - Genesis2Female__PHMJawCurve
+  - Genesis2Female__PHMJawCornerWidthR
+  - Genesis2Female__PHMJawCornerWidthL
+  - Genesis2Female__PHMJawAngle
+  - Genesis2Female__PHMFaceYoung
+  - Genesis2Female__PHMFaceSquareR
+  - Genesis2Female__PHMFaceSquareL
+  - Genesis2Female__PHMFaceRoundR
+  - Genesis2Female__PHMFaceRoundL
+  - Genesis2Female__PHMFaceHeartR
+  - Genesis2Female__PHMFaceHeartL
+  - Genesis2Female__PHMFaceFlatR
+  - Genesis2Female__PHMFaceFlatL
+  - Genesis2Female__PHMFaceCenterDepth
+  - Genesis2Female__PHMEyesSizeR
+  - Genesis2Female__PHMEyesSizeL
+  - Genesis2Female__PHMEyesPuffyLower
+  - Genesis2Female__PHMEyesIrisSize
+  - Genesis2Female__PHMEyesHeightOuter
+  - Genesis2Female__PHMEyesAngleR
+  - Genesis2Female__PHMEyesAngleL
+  - Genesis2Female__PHMEyesAlmondOuterR
+  - Genesis2Female__PHMEyesAlmondOuterL
+  - Genesis2Female__PHMEyesAlmondInnerR
+  - Genesis2Female__PHMEyesAlmondInnerL
+  - Genesis2Female__PHMEyelidsTopOutHeight
+  - Genesis2Female__PHMEyelidsTopInHeight
+  - Genesis2Female__PHMEyelidsFoldDown
+  - Genesis2Female__PHMEyelashesLength
+  - Genesis2Female__PHMEyelashesHideLayer2
+  - Genesis2Female__PHMEyelashesHideLayer1
+  - Genesis2Female__PHMEarsElfLong
+  - Genesis2Female__PHMEarlobesLength
+  - Genesis2Female__PHMEarlobesAttached
+  - Genesis2Female__PHMCrowsFeet
+  - Genesis2Female__PHMChinWidthR
+  - Genesis2Female__PHMChinWidthL
+  - Genesis2Female__PHMChinCleft
+  - Genesis2Female__PHMCheeksSinkR
+  - Genesis2Female__PHMCheeksSinkL
+  - Genesis2Female__PHMCheeksDimpleCreaseR
+  - Genesis2Female__PHMCheeksDimpleCreaseL
+  - Genesis2Female__PHMCheeksDepthR
+  - Genesis2Female__PHMCheeksDepthL
+  - Genesis2Female__PHMCheeksDefine
+  - Genesis2Female__PHMCheekBonesWidth
+  - Genesis2Female__PBMWaistWidth
+  - Genesis2Female__PBMThighsSize
+  - Genesis2Female__PBMStomachLowerDepth
+  - Genesis2Female__PBMSternumDepth
+  - Genesis2Female__PBMRibcageSize
+  - Genesis2Female__PBMPregnant
+  - Genesis2Female__PBMNeckSize
+  - Genesis2Female__PBMNailsLength
+  - Genesis2Female__PBMLoveHandles
+  - Genesis2Female__PBMLegsLength
+  - Genesis2Female__PBMGlutesSize
+  - Genesis2Female__PBMForearmsSize
+  - Genesis2Female__PBMCalvesSize
+  - Genesis2Female__PBMBreastsUnderCurve
+  - Genesis2Female__PBMBreastsSmall
+  - Genesis2Female__PBMBreastsShape08
+  - Genesis2Female__PBMBreastsShape05
+  - Genesis2Female__PBMBreastsShape04
+  - Genesis2Female__PBMBreastsShape03
+  - Genesis2Female__PBMBreastsPerkSide
+  - Genesis2Female__PBMBreastsNaturalR
+  - Genesis2Female__PBMBreastsNaturalL
+  - Genesis2Female__PBMBreastsHeavy
+  - Genesis2Female__PBMBreastsDownwardSlope
+  - Genesis2Female__PBMBreastsDiameter
+  - Genesis2Female__PBMBreastsCleavage
+  - Genesis2Female__FBMThin
+  - Genesis2Female__FBMPearFigure
+  - Genesis2Female__FBMHeight
+  - Genesis2Female__FBMHeavy
+  - Genesis2Female__FBMFitnessSize
+  - Genesis2Female__FBMFitnessDetails
+  - Genesis2Female__FBMEmaciated
+  - Genesis2Female__FBMBodyTone
+  - Genesis2Female__FBMBodySize
+  - Genesis2Female__FBMBodybuilderSize
+  - Genesis2Female__FBMBodybuilderDetails
+  - Genesis2Female__FBMAndrogynous
+  - Genesis2Female__PHMTongueForkShort
+  - Genesis2Female__PHMTongueFork
+  - Genesis2Female__PHMTeethVampireTop
+  - Genesis2Female__PHMTeethVampireBottom
+  - Genesis2Female__PHMTeethSlant
+  - Genesis2Female__PHMTeethSharpTop
+  - Genesis2Female__PHMTeethSharpLongTop
+  - Genesis2Female__PHMTeethSharpLongBottom
+  - Genesis2Female__PHMTeethSharpBottom
+  - Genesis2Female__PHMTeethNosferatu
+  - Genesis2Female__PHMTeethMessy
+  - Genesis2Female__PHMTeethFangTop
+  - Genesis2Female__PHMTeethFangBottom
+  - Genesis2Female__PHMTeethExCrooked
+  - Genesis2Female__PHMTeethChip
+  - Genesis2Female__PHMTeethCanineSharpTop
+  - Genesis2Female__PHMTeethCanineSharpBottom
+  - Genesis2Female__PHMTeethBeastTop
+  - Genesis2Female__PHMTeethBeastNarrowTop
+  - Genesis2Female__PHMTeethBeastNarrowBottom
+  - Genesis2Female__PHMTeethBeastBottom
+  - Genesis2Female__PHMScalpCrest
+  - Genesis2Female__PHMrHornSide
+  - Genesis2Female__PHMrHornFrontSmall
+  - Genesis2Female__PHMrHornFrontLarge
+  - Genesis2Female__PHMrHornFrontHigh
+  - Genesis2Female__PHMNoseZombie
+  - Genesis2Female__PHMNosePig
+  - Genesis2Female__PHMNoseHag
+  - Genesis2Female__PHMNoseFaerie
+  - Genesis2Female__PHMNoseCat
+  - Genesis2Female__PHMMolarsGone
+  - Genesis2Female__PHMlHornSide
+  - Genesis2Female__PHMlHornFrontSmall
+  - Genesis2Female__PHMlHornFrontLarge
+  - Genesis2Female__PHMlHornFrontHigh
+  - Genesis2Female__PHMEyesCat
+  - Genesis2Female__PHMEarsRabbit
+  - Genesis2Female__PHMEarsPig
+  - Genesis2Female__PHMEarsGone
+  - Genesis2Female__PHMEarPanther
+  - Genesis2Female__PHMEarMouseBack
+  - Genesis2Female__PHMEarMouse
+  - Genesis2Female__PHMEarGremlin
+  - Genesis2Female__PHMEarFin
+  - Genesis2Female__PHMEarElfShort
+  - Genesis2Female__PHMEarElfMid
+  - Genesis2Female__PHMEarElfElfln
+  - Genesis2Female__PHMEarDeerBack
+  - Genesis2Female__PHMEarDeer
+  - Genesis2Female__PHMEarChimp
+  - Genesis2Female__PHMEarCatBack
+  - Genesis2Female__PHMEarCat
+  - Genesis2Female__PHMEarBat
+  - Genesis2Female__PHMEarAlien
+  - Genesis2Female__PHMAlienScalp
+  - Genesis2Female__PBMToenailsClaw
+  - Genesis2Female__PBMHunchback
+  - Genesis2Female__PBMHandsWitch
+  - Genesis2Female__PBMHandsFroglike
+  - Genesis2Female__PBMHandsElongated
+  - Genesis2Female__PBMHandsBeast
+  - Genesis2Female__PBMFingernailsClaw
+  - Genesis2Female__PBMFeetFroglike
+  - Genesis2Female__PBMFeetElongated
+  - Genesis2Female__PBMFeetBeast
+  - Genesis2Female__PBMBelly
+  - Genesis2Female__FHMZombie
+  - Genesis2Female__FHMSmoothAlien
+  - Genesis2Female__FHMSkeletalVampire
+  - Genesis2Female__FHMPlatedAlien
+  - Genesis2Female__FHMOrc
+  - Genesis2Female__FHMLion
+  - Genesis2Female__FHMHobgoblin
+  - Genesis2Female__FHMHellFiend
+  - Genesis2Female__FHMHammerHeadAlien
+  - Genesis2Female__FHMHag2
+  - Genesis2Female__FHMHag
+  - Genesis2Female__FHMGoblin
+  - Genesis2Female__FHMFaerie
+  - Genesis2Female__FHMExo
+  - Genesis2Female__FHMDemon
+  - Genesis2Female__FHMChimp
+  - Genesis2Female__FHMCatGirl
+  - Genesis2Female__FHMBat
+  - Genesis2Female__FHMAquaticAlien
+  - Genesis2Female__FHMAmphibiousAlien
+  - Genesis2Female__FHMAlienHumanoid
+  - Genesis2Female__FHMAlienGreySmooth
+  - Genesis2Female__FHMAlienGrey
+  - Genesis2Female__FBMZombie
+  - Genesis2Female__FBMHag
+  - Genesis2Female__FBMGoblin
+  - Genesis2Female__FBMFaerie
+  - Genesis2Female__FBMExo
+  - Genesis2Female__VSMW
+  - Genesis2Female__VSMUW
+  - Genesis2Female__VSMTH
+  - Genesis2Female__VSMT
+  - Genesis2Female__VSMSH
+  - Genesis2Female__VSMS
+  - Genesis2Female__VSMOW
+  - Genesis2Female__VSMM
+  - Genesis2Female__VSML
+  - Genesis2Female__VSMK
+  - Genesis2Female__VSMIY
+  - Genesis2Female__VSMIH
+  - Genesis2Female__VSMF
+  - Genesis2Female__VSMER
+  - Genesis2Female__VSMEH
+  - Genesis2Female__VSMAA
+  - Genesis2Female__PHMSurprise
+  - Genesis2Female__PHMSnarlRight
+  - Genesis2Female__PHMSnarlLeft
+  - Genesis2Female__PHMSmileOpenFullFace
+  - Genesis2Female__PHMSmileFullFace
+  - Genesis2Female__PHMShock
+  - Genesis2Female__PHMScream
+  - Genesis2Female__PHMSad
+  - Genesis2Female__PHMPain
+  - Genesis2Female__PHMMouthSmileSimpleR
+  - Genesis2Female__PHMMouthSmileSimpleL
+  - Genesis2Female__PHMMouthSmileOpen
+  - Genesis2Female__PHMMouthSmile
+  - Genesis2Female__PHMMouthOpenWide
+  - Genesis2Female__PHMMouthOpen
+  - Genesis2Female__PHMMouthNarrowR
+  - Genesis2Female__PHMMouthNarrowL
+  - Genesis2Female__PHMMouthFrown
+  - Genesis2Female__PHMMouthCornerUpDown
+  - Genesis2Female__PHMLipTopUpR
+  - Genesis2Female__PHMLipTopUpL
+  - Genesis2Female__PHMLipsPuckerWide
+  - Genesis2Female__PHMLipsPucker
+  - Genesis2Female__PHMLipsPartCenter
+  - Genesis2Female__PHMLipsPart
+  - Genesis2Female__PHMLipBottomOutR
+  - Genesis2Female__PHMLipBottomOutL
+  - Genesis2Female__PHMLipBottomInR
+  - Genesis2Female__PHMLipBottomInL
+  - Genesis2Female__PHMLipBottomDownL
+  - Genesis2Female__PHMJawOut
+  - Genesis2Female__PHMJawIn
+  - Genesis2Female__PHMHappy
+  - Genesis2Female__PHMGlare
+  - Genesis2Female__PHMFrown
+  - Genesis2Female__PHMFlirtingMasculineR
+  - Genesis2Female__PHMFlirtingFeminineR
+  - Genesis2Female__PHMFlirtingFeminineL
+  - Genesis2Female__PHMFear
+  - Genesis2Female__PHMEyesSquintR
+  - Genesis2Female__PHMEyesSquintL
+  - Genesis2Female__PHMEyesClosedR
+  - Genesis2Female__PHMEyesClosedL
+  - Genesis2Female__PHMEyeLidsTopUpR
+  - Genesis2Female__PHMEyeLidsTopUpL
+  - Genesis2Female__PHMEyelidsTopDownR
+  - Genesis2Female__PHMEyelidsTopDownL
+  - Genesis2Female__PHMEyeLidsBottomUpR
+  - Genesis2Female__PHMEyeLidsBottomUpL
+  - Genesis2Female__PHMEyeLidsBottomDownR
+  - Genesis2Female__PHMEyeLidsBottomDownL
+  - Genesis2Female__PHMExcitement
+  - Genesis2Female__PHMDisgust
+  - Genesis2Female__PHMContempt
+  - Genesis2Female__PHMConfused
+  - Genesis2Female__PHMCheeksBalloonPucker
+  - Genesis2Female__PHMCheeksBalloon
+  - Genesis2Female__PHMBrowInnerUpR
+  - Genesis2Female__PHMBrowInnerUpL
+  - Genesis2Female__PHMBrowInnerDownR
+  - Genesis2Female__PHMBrowInnerDownL
+  - Genesis2Female__PHMBrowDownR
+  - Genesis2Female__PHMBrowDownL
+  - Genesis2Female__PHMAngry
+  - Genesis2Female__PHMAfraid
+  - Genesis2Female__PBMrBreastsHangForward
+  - Genesis2Female__PBMrBreastsFlatten
+  - Genesis2Female__PBMlBreastsHangForward
+  - Genesis2Female__PBMFeetShoeFit
+  - Genesis2Female__PBMBreastsSize
+  initialize: 0
+--- !u!114 &1003273949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003273944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1624661579, guid: 7a255d2e87aae364fbd819c455094253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salsa3D: {fileID: 0}
+  skinnedMeshRenderer: {fileID: 1879996495}
+  prevSkinnedMeshRenderer: {fileID: 1879996495}
+  getSkndMshRndr: 0
+  blendShapes:
+  - Genesis2Female__SCLTorsoLength
+  - Genesis2Female__SCLShldrsWidth
+  - Genesis2Female__SCLShldrsScale
+  - Genesis2Female__SCLPalmScaleR
+  - Genesis2Female__SCLPalmScaleL
+  - Genesis2Female__SCLPalmScale
+  - Genesis2Female__SCLNeckLength
+  - Genesis2Female__SCLFingersWidthR
+  - Genesis2Female__SCLFingersWidthL
+  - Genesis2Female__SCLFingersWidth
+  - Genesis2Female__SCLFingersLengthR
+  - Genesis2Female__SCLFingersLengthL
+  - Genesis2Female__SCLFingersLength
+  - Genesis2Female__SCLChestWidth
+  - Genesis2Female__SCLChestDepth
+  - Genesis2Female__SCLArmsLength
+  - Genesis2Female__SCLPropagatingHead
+  - Genesis2Female__SCLPropagatingHandR
+  - Genesis2Female__SCLPropagatingHandL
+  - Genesis2Female__SCLPropagatingHand
+  - Genesis2Female__SCLPropagatingFootR
+  - Genesis2Female__SCLPropagatingFootL
+  - Genesis2Female__SCLPropagatingFoot
+  - Genesis2Female__SCLPropagatingChest
+  - Genesis2Female__CBMYoungerTeen
+  - Genesis2Female__CBMOlderTeen
+  - Genesis2Female__CBMAged2
+  - Genesis2Female__CBMAged1
+  - Genesis2Female__CBMAdult
+  - Genesis2Female__CBM5yearold
+  - Genesis2Female__CBM10yearold
+  - Genesis2Female__Youth_Weight
+  - Genesis2Female__Youth_Posture
+  - Genesis2Female__Youth_Morph
+  - Genesis2Female__Head_Proportion
+  - Genesis2Female__Neck_Weight
+  - Genesis2Female__Basic_Weight1
+  - Genesis2Female__Thin_Lips
+  - Genesis2Female__Teeth_Hide
+  - Genesis2Female__Shoulder_Drop
+  - Genesis2Female__Nose_Age
+  - Genesis2Female__Mouth_Sag
+  - Genesis2Female__Eyelid_Size
+  - Genesis2Female__Eye_Size
+  - Genesis2Female__Eye_Sag_Top
+  - Genesis2Female__Chin_Pointed
+  - Genesis2Female__Bulbous2
+  - Genesis2Female__Bulbous1
+  - Genesis2Female__Aged_Posture
+  - Genesis2Female__Aged_Posture_Smoother
+  - Genesis2Female__Aged_Body2
+  - Genesis2Female__Aged_Body1
+  - Genesis2Female__FHMGogo
+  - Genesis2Female__PHMDevilFangs
+  - Genesis2Female__PHMDevilEyes
+  - Genesis2Female__PBMDevilClaws
+  - Genesis2Female__FaeEars
+  - Genesis2Female__FHMCoral
+  - Genesis2Female__PBMWaistNarrowUpper
+  - Genesis2Female__PBMWaistNarrowLower
+  - Genesis2Female__PHMTemplesDefineR
+  - Genesis2Female__PHMTemplesDefineL
+  - Genesis2Female__PHMPupilsSlit
+  - Genesis2Female__PHMPupilsDialate
+  - Genesis2Female__PHMNostrilsWidthL
+  - Genesis2Female__PHMNoseWidth
+  - Genesis2Female__PHMNoseTipRound
+  - Genesis2Female__PHMNoseTipHeight
+  - Genesis2Female__PHMNoseSize
+  - Genesis2Female__PHMNoseRidgeWidth
+  - Genesis2Female__PHMNosePinch
+  - Genesis2Female__PHMNoseDepth
+  - Genesis2Female__PHMNoseBump
+  - Genesis2Female__PHMNoseBridgeSlope
+  - Genesis2Female__PHMNoseBridgeDepth
+  - Genesis2Female__PHMMouthWidth
+  - Genesis2Female__PHMMouthCurves
+  - Genesis2Female__PHMLipUpperSize
+  - Genesis2Female__PHMLipsSquare
+  - Genesis2Female__PHMLipsHeart
+  - Genesis2Female__PHMLipLowerDepth
+  - Genesis2Female__PHMLacrimalsPinch
+  - Genesis2Female__PHMJawLineDepth
+  - Genesis2Female__PHMJawHeightR
+  - Genesis2Female__PHMJawHeightL
+  - Genesis2Female__PHMJawCurve
+  - Genesis2Female__PHMJawCornerWidthR
+  - Genesis2Female__PHMJawCornerWidthL
+  - Genesis2Female__PHMJawAngle
+  - Genesis2Female__PHMFaceYoung
+  - Genesis2Female__PHMFaceSquareR
+  - Genesis2Female__PHMFaceSquareL
+  - Genesis2Female__PHMFaceRoundR
+  - Genesis2Female__PHMFaceRoundL
+  - Genesis2Female__PHMFaceHeartR
+  - Genesis2Female__PHMFaceHeartL
+  - Genesis2Female__PHMFaceFlatR
+  - Genesis2Female__PHMFaceFlatL
+  - Genesis2Female__PHMFaceCenterDepth
+  - Genesis2Female__PHMEyesSizeR
+  - Genesis2Female__PHMEyesSizeL
+  - Genesis2Female__PHMEyesPuffyLower
+  - Genesis2Female__PHMEyesIrisSize
+  - Genesis2Female__PHMEyesHeightOuter
+  - Genesis2Female__PHMEyesAngleR
+  - Genesis2Female__PHMEyesAngleL
+  - Genesis2Female__PHMEyesAlmondOuterR
+  - Genesis2Female__PHMEyesAlmondOuterL
+  - Genesis2Female__PHMEyesAlmondInnerR
+  - Genesis2Female__PHMEyesAlmondInnerL
+  - Genesis2Female__PHMEyelidsTopOutHeight
+  - Genesis2Female__PHMEyelidsTopInHeight
+  - Genesis2Female__PHMEyelidsFoldDown
+  - Genesis2Female__PHMEyelashesLength
+  - Genesis2Female__PHMEyelashesHideLayer2
+  - Genesis2Female__PHMEyelashesHideLayer1
+  - Genesis2Female__PHMEarsElfLong
+  - Genesis2Female__PHMEarlobesLength
+  - Genesis2Female__PHMEarlobesAttached
+  - Genesis2Female__PHMCrowsFeet
+  - Genesis2Female__PHMChinWidthR
+  - Genesis2Female__PHMChinWidthL
+  - Genesis2Female__PHMChinCleft
+  - Genesis2Female__PHMCheeksSinkR
+  - Genesis2Female__PHMCheeksSinkL
+  - Genesis2Female__PHMCheeksDimpleCreaseR
+  - Genesis2Female__PHMCheeksDimpleCreaseL
+  - Genesis2Female__PHMCheeksDepthR
+  - Genesis2Female__PHMCheeksDepthL
+  - Genesis2Female__PHMCheeksDefine
+  - Genesis2Female__PHMCheekBonesWidth
+  - Genesis2Female__PBMWaistWidth
+  - Genesis2Female__PBMThighsSize
+  - Genesis2Female__PBMStomachLowerDepth
+  - Genesis2Female__PBMSternumDepth
+  - Genesis2Female__PBMRibcageSize
+  - Genesis2Female__PBMPregnant
+  - Genesis2Female__PBMNeckSize
+  - Genesis2Female__PBMNailsLength
+  - Genesis2Female__PBMLoveHandles
+  - Genesis2Female__PBMLegsLength
+  - Genesis2Female__PBMGlutesSize
+  - Genesis2Female__PBMForearmsSize
+  - Genesis2Female__PBMCalvesSize
+  - Genesis2Female__PBMBreastsUnderCurve
+  - Genesis2Female__PBMBreastsSmall
+  - Genesis2Female__PBMBreastsShape08
+  - Genesis2Female__PBMBreastsShape05
+  - Genesis2Female__PBMBreastsShape04
+  - Genesis2Female__PBMBreastsShape03
+  - Genesis2Female__PBMBreastsPerkSide
+  - Genesis2Female__PBMBreastsNaturalR
+  - Genesis2Female__PBMBreastsNaturalL
+  - Genesis2Female__PBMBreastsHeavy
+  - Genesis2Female__PBMBreastsDownwardSlope
+  - Genesis2Female__PBMBreastsDiameter
+  - Genesis2Female__PBMBreastsCleavage
+  - Genesis2Female__FBMThin
+  - Genesis2Female__FBMPearFigure
+  - Genesis2Female__FBMHeight
+  - Genesis2Female__FBMHeavy
+  - Genesis2Female__FBMFitnessSize
+  - Genesis2Female__FBMFitnessDetails
+  - Genesis2Female__FBMEmaciated
+  - Genesis2Female__FBMBodyTone
+  - Genesis2Female__FBMBodySize
+  - Genesis2Female__FBMBodybuilderSize
+  - Genesis2Female__FBMBodybuilderDetails
+  - Genesis2Female__FBMAndrogynous
+  - Genesis2Female__PHMTongueForkShort
+  - Genesis2Female__PHMTongueFork
+  - Genesis2Female__PHMTeethVampireTop
+  - Genesis2Female__PHMTeethVampireBottom
+  - Genesis2Female__PHMTeethSlant
+  - Genesis2Female__PHMTeethSharpTop
+  - Genesis2Female__PHMTeethSharpLongTop
+  - Genesis2Female__PHMTeethSharpLongBottom
+  - Genesis2Female__PHMTeethSharpBottom
+  - Genesis2Female__PHMTeethNosferatu
+  - Genesis2Female__PHMTeethMessy
+  - Genesis2Female__PHMTeethFangTop
+  - Genesis2Female__PHMTeethFangBottom
+  - Genesis2Female__PHMTeethExCrooked
+  - Genesis2Female__PHMTeethChip
+  - Genesis2Female__PHMTeethCanineSharpTop
+  - Genesis2Female__PHMTeethCanineSharpBottom
+  - Genesis2Female__PHMTeethBeastTop
+  - Genesis2Female__PHMTeethBeastNarrowTop
+  - Genesis2Female__PHMTeethBeastNarrowBottom
+  - Genesis2Female__PHMTeethBeastBottom
+  - Genesis2Female__PHMScalpCrest
+  - Genesis2Female__PHMrHornSide
+  - Genesis2Female__PHMrHornFrontSmall
+  - Genesis2Female__PHMrHornFrontLarge
+  - Genesis2Female__PHMrHornFrontHigh
+  - Genesis2Female__PHMNoseZombie
+  - Genesis2Female__PHMNosePig
+  - Genesis2Female__PHMNoseHag
+  - Genesis2Female__PHMNoseFaerie
+  - Genesis2Female__PHMNoseCat
+  - Genesis2Female__PHMMolarsGone
+  - Genesis2Female__PHMlHornSide
+  - Genesis2Female__PHMlHornFrontSmall
+  - Genesis2Female__PHMlHornFrontLarge
+  - Genesis2Female__PHMlHornFrontHigh
+  - Genesis2Female__PHMEyesCat
+  - Genesis2Female__PHMEarsRabbit
+  - Genesis2Female__PHMEarsPig
+  - Genesis2Female__PHMEarsGone
+  - Genesis2Female__PHMEarPanther
+  - Genesis2Female__PHMEarMouseBack
+  - Genesis2Female__PHMEarMouse
+  - Genesis2Female__PHMEarGremlin
+  - Genesis2Female__PHMEarFin
+  - Genesis2Female__PHMEarElfShort
+  - Genesis2Female__PHMEarElfMid
+  - Genesis2Female__PHMEarElfElfln
+  - Genesis2Female__PHMEarDeerBack
+  - Genesis2Female__PHMEarDeer
+  - Genesis2Female__PHMEarChimp
+  - Genesis2Female__PHMEarCatBack
+  - Genesis2Female__PHMEarCat
+  - Genesis2Female__PHMEarBat
+  - Genesis2Female__PHMEarAlien
+  - Genesis2Female__PHMAlienScalp
+  - Genesis2Female__PBMToenailsClaw
+  - Genesis2Female__PBMHunchback
+  - Genesis2Female__PBMHandsWitch
+  - Genesis2Female__PBMHandsFroglike
+  - Genesis2Female__PBMHandsElongated
+  - Genesis2Female__PBMHandsBeast
+  - Genesis2Female__PBMFingernailsClaw
+  - Genesis2Female__PBMFeetFroglike
+  - Genesis2Female__PBMFeetElongated
+  - Genesis2Female__PBMFeetBeast
+  - Genesis2Female__PBMBelly
+  - Genesis2Female__FHMZombie
+  - Genesis2Female__FHMSmoothAlien
+  - Genesis2Female__FHMSkeletalVampire
+  - Genesis2Female__FHMPlatedAlien
+  - Genesis2Female__FHMOrc
+  - Genesis2Female__FHMLion
+  - Genesis2Female__FHMHobgoblin
+  - Genesis2Female__FHMHellFiend
+  - Genesis2Female__FHMHammerHeadAlien
+  - Genesis2Female__FHMHag2
+  - Genesis2Female__FHMHag
+  - Genesis2Female__FHMGoblin
+  - Genesis2Female__FHMFaerie
+  - Genesis2Female__FHMExo
+  - Genesis2Female__FHMDemon
+  - Genesis2Female__FHMChimp
+  - Genesis2Female__FHMCatGirl
+  - Genesis2Female__FHMBat
+  - Genesis2Female__FHMAquaticAlien
+  - Genesis2Female__FHMAmphibiousAlien
+  - Genesis2Female__FHMAlienHumanoid
+  - Genesis2Female__FHMAlienGreySmooth
+  - Genesis2Female__FHMAlienGrey
+  - Genesis2Female__FBMZombie
+  - Genesis2Female__FBMHag
+  - Genesis2Female__FBMGoblin
+  - Genesis2Female__FBMFaerie
+  - Genesis2Female__FBMExo
+  - Genesis2Female__VSMW
+  - Genesis2Female__VSMUW
+  - Genesis2Female__VSMTH
+  - Genesis2Female__VSMT
+  - Genesis2Female__VSMSH
+  - Genesis2Female__VSMS
+  - Genesis2Female__VSMOW
+  - Genesis2Female__VSMM
+  - Genesis2Female__VSML
+  - Genesis2Female__VSMK
+  - Genesis2Female__VSMIY
+  - Genesis2Female__VSMIH
+  - Genesis2Female__VSMF
+  - Genesis2Female__VSMER
+  - Genesis2Female__VSMEH
+  - Genesis2Female__VSMAA
+  - Genesis2Female__PHMSurprise
+  - Genesis2Female__PHMSnarlRight
+  - Genesis2Female__PHMSnarlLeft
+  - Genesis2Female__PHMSmileOpenFullFace
+  - Genesis2Female__PHMSmileFullFace
+  - Genesis2Female__PHMShock
+  - Genesis2Female__PHMScream
+  - Genesis2Female__PHMSad
+  - Genesis2Female__PHMPain
+  - Genesis2Female__PHMMouthSmileSimpleR
+  - Genesis2Female__PHMMouthSmileSimpleL
+  - Genesis2Female__PHMMouthSmileOpen
+  - Genesis2Female__PHMMouthSmile
+  - Genesis2Female__PHMMouthOpenWide
+  - Genesis2Female__PHMMouthOpen
+  - Genesis2Female__PHMMouthNarrowR
+  - Genesis2Female__PHMMouthNarrowL
+  - Genesis2Female__PHMMouthFrown
+  - Genesis2Female__PHMMouthCornerUpDown
+  - Genesis2Female__PHMLipTopUpR
+  - Genesis2Female__PHMLipTopUpL
+  - Genesis2Female__PHMLipsPuckerWide
+  - Genesis2Female__PHMLipsPucker
+  - Genesis2Female__PHMLipsPartCenter
+  - Genesis2Female__PHMLipsPart
+  - Genesis2Female__PHMLipBottomOutR
+  - Genesis2Female__PHMLipBottomOutL
+  - Genesis2Female__PHMLipBottomInR
+  - Genesis2Female__PHMLipBottomInL
+  - Genesis2Female__PHMLipBottomDownL
+  - Genesis2Female__PHMJawOut
+  - Genesis2Female__PHMJawIn
+  - Genesis2Female__PHMHappy
+  - Genesis2Female__PHMGlare
+  - Genesis2Female__PHMFrown
+  - Genesis2Female__PHMFlirtingMasculineR
+  - Genesis2Female__PHMFlirtingFeminineR
+  - Genesis2Female__PHMFlirtingFeminineL
+  - Genesis2Female__PHMFear
+  - Genesis2Female__PHMEyesSquintR
+  - Genesis2Female__PHMEyesSquintL
+  - Genesis2Female__PHMEyesClosedR
+  - Genesis2Female__PHMEyesClosedL
+  - Genesis2Female__PHMEyeLidsTopUpR
+  - Genesis2Female__PHMEyeLidsTopUpL
+  - Genesis2Female__PHMEyelidsTopDownR
+  - Genesis2Female__PHMEyelidsTopDownL
+  - Genesis2Female__PHMEyeLidsBottomUpR
+  - Genesis2Female__PHMEyeLidsBottomUpL
+  - Genesis2Female__PHMEyeLidsBottomDownR
+  - Genesis2Female__PHMEyeLidsBottomDownL
+  - Genesis2Female__PHMExcitement
+  - Genesis2Female__PHMDisgust
+  - Genesis2Female__PHMContempt
+  - Genesis2Female__PHMConfused
+  - Genesis2Female__PHMCheeksBalloonPucker
+  - Genesis2Female__PHMCheeksBalloon
+  - Genesis2Female__PHMBrowInnerUpR
+  - Genesis2Female__PHMBrowInnerUpL
+  - Genesis2Female__PHMBrowInnerDownR
+  - Genesis2Female__PHMBrowInnerDownL
+  - Genesis2Female__PHMBrowDownR
+  - Genesis2Female__PHMBrowDownL
+  - Genesis2Female__PHMAngry
+  - Genesis2Female__PHMAfraid
+  - Genesis2Female__PBMrBreastsHangForward
+  - Genesis2Female__PBMrBreastsFlatten
+  - Genesis2Female__PBMlBreastsHangForward
+  - Genesis2Female__PBMFeetShoeFit
+  - Genesis2Female__PBMBreastsSize
+  lookUpIndex: 0
+  lookDownIndex: 0
+  lookLeftIndex: 0
+  lookRightIndex: 0
+  blinkIndex: 0
+  lookPosition: 4
+  lookAmount:
+    lookUp: 0
+    lookDown: 0
+    lookLeft: 0
+    lookRight: 0
+    blink: 0
+  randomEyes: 1
+  maxRandomInterval: 3
+  blendSpeed: 8
+  rangeOfMotion: 50
+  blinkDuration: 0.05
+  blinkSpeed: 12
+  openMax: 5
+  closeMax: 100
+  eyePosition: {fileID: 1868232954}
+  eyePosVerify: {fileID: 0}
+  lookTarget: {fileID: 0}
+  lookSensitivity: 4
+  targetAffinity: 0
+  targetAffinityPercentage: 0.5
+  invertTracking: 0
+  trackBehind: 0
+  blink: 1
+  maxBlinkInterval: 5
+  broadcast: 0
+  broadcastReceiversCount: 0
+  prevBroadcastReceiversCount: 0
+  expandBroadcast: 0
+  broadcastReceivers: []
+  propagateToChildren: 0
+  broadcastNeeded: 0
+  broadcastCS: 0
+  broadcastCSReceiversCount: 0
+  prevBroadcastCSReceiversCount: 0
+  expandBroadcastCS: 0
+  broadcastCSReceivers: []
+  propagateToChildrenCS: 0
+  selectedCustomShape: 65
+  noneShapeIndex: 65
+  excludeEyeShapes: 1
+  dynamicCustomShapes:
+  - Genesis2Female__PHMSurprise
+  - Genesis2Female__PHMSnarlRight
+  - Genesis2Female__PHMSnarlLeft
+  - Genesis2Female__PHMSmileOpenFullFace
+  - Genesis2Female__PHMSmileFullFace
+  - Genesis2Female__PHMShock
+  - Genesis2Female__PHMScream
+  - Genesis2Female__PHMSad
+  - Genesis2Female__PHMPain
+  - Genesis2Female__PHMMouthSmileSimpleR
+  - Genesis2Female__PHMMouthSmileSimpleL
+  - Genesis2Female__PHMMouthSmileOpen
+  - Genesis2Female__PHMMouthSmile
+  - Genesis2Female__PHMMouthOpenWide
+  - Genesis2Female__PHMMouthOpen
+  - Genesis2Female__PHMMouthNarrowR
+  - Genesis2Female__PHMMouthNarrowL
+  - Genesis2Female__PHMMouthFrown
+  - Genesis2Female__PHMMouthCornerUpDown
+  - Genesis2Female__PHMLipTopUpR
+  - Genesis2Female__PHMLipTopUpL
+  - Genesis2Female__PHMLipsPuckerWide
+  - Genesis2Female__PHMLipsPucker
+  - Genesis2Female__PHMLipsPartCenter
+  - Genesis2Female__PHMLipsPart
+  - Genesis2Female__PHMLipBottomOutR
+  - Genesis2Female__PHMLipBottomOutL
+  - Genesis2Female__PHMLipBottomInR
+  - Genesis2Female__PHMLipBottomInL
+  - Genesis2Female__PHMLipBottomDownL
+  - Genesis2Female__PHMJawOut
+  - Genesis2Female__PHMJawIn
+  - Genesis2Female__PHMHappy
+  - Genesis2Female__PHMGlare
+  - Genesis2Female__PHMFrown
+  - Genesis2Female__PHMFlirtingMasculineR
+  - Genesis2Female__PHMFlirtingFeminineR
+  - Genesis2Female__PHMFlirtingFeminineL
+  - Genesis2Female__PHMFear
+  - Genesis2Female__PHMEyesSquintR
+  - Genesis2Female__PHMEyesSquintL
+  - Genesis2Female__PHMEyesClosedR
+  - Genesis2Female__PHMEyesClosedL
+  - Genesis2Female__PHMEyeLidsTopUpR
+  - Genesis2Female__PHMEyeLidsTopUpL
+  - Genesis2Female__PHMEyelidsTopDownR
+  - Genesis2Female__PHMEyelidsTopDownL
+  - Genesis2Female__PHMEyeLidsBottomUpR
+  - Genesis2Female__PHMEyeLidsBottomUpL
+  - Genesis2Female__PHMEyeLidsBottomDownR
+  - Genesis2Female__PHMEyeLidsBottomDownL
+  - Genesis2Female__PHMExcitement
+  - Genesis2Female__PHMDisgust
+  - Genesis2Female__PHMContempt
+  - Genesis2Female__PHMConfused
+  - Genesis2Female__PHMCheeksBalloonPucker
+  - Genesis2Female__PHMCheeksBalloon
+  - Genesis2Female__PHMBrowInnerUpR
+  - Genesis2Female__PHMBrowInnerUpL
+  - Genesis2Female__PHMBrowInnerDownR
+  - Genesis2Female__PHMBrowInnerDownL
+  - Genesis2Female__PHMBrowDownR
+  - Genesis2Female__PHMBrowDownL
+  - Genesis2Female__PHMAngry
+  - Genesis2Female__PHMAfraid
+  - None
+  customShapeCount: 65
+  expandCustomShapes: 0
+  customShapes:
+  - shapeIndex: 280
+    shapeName: Genesis2Female__PHMSurprise
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 281
+    shapeName: Genesis2Female__PHMSnarlRight
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 282
+    shapeName: Genesis2Female__PHMSnarlLeft
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 283
+    shapeName: Genesis2Female__PHMSmileOpenFullFace
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 284
+    shapeName: Genesis2Female__PHMSmileFullFace
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 285
+    shapeName: Genesis2Female__PHMShock
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 286
+    shapeName: Genesis2Female__PHMScream
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 287
+    shapeName: Genesis2Female__PHMSad
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 288
+    shapeName: Genesis2Female__PHMPain
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 289
+    shapeName: Genesis2Female__PHMMouthSmileSimpleR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 290
+    shapeName: Genesis2Female__PHMMouthSmileSimpleL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 291
+    shapeName: Genesis2Female__PHMMouthSmileOpen
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 292
+    shapeName: Genesis2Female__PHMMouthSmile
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 293
+    shapeName: Genesis2Female__PHMMouthOpenWide
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 294
+    shapeName: Genesis2Female__PHMMouthOpen
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 295
+    shapeName: Genesis2Female__PHMMouthNarrowR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 296
+    shapeName: Genesis2Female__PHMMouthNarrowL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 297
+    shapeName: Genesis2Female__PHMMouthFrown
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 298
+    shapeName: Genesis2Female__PHMMouthCornerUpDown
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 299
+    shapeName: Genesis2Female__PHMLipTopUpR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 300
+    shapeName: Genesis2Female__PHMLipTopUpL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 301
+    shapeName: Genesis2Female__PHMLipsPuckerWide
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 302
+    shapeName: Genesis2Female__PHMLipsPucker
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 303
+    shapeName: Genesis2Female__PHMLipsPartCenter
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 304
+    shapeName: Genesis2Female__PHMLipsPart
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 305
+    shapeName: Genesis2Female__PHMLipBottomOutR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 306
+    shapeName: Genesis2Female__PHMLipBottomOutL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 307
+    shapeName: Genesis2Female__PHMLipBottomInR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 308
+    shapeName: Genesis2Female__PHMLipBottomInL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 309
+    shapeName: Genesis2Female__PHMLipBottomDownL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 310
+    shapeName: Genesis2Female__PHMJawOut
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 311
+    shapeName: Genesis2Female__PHMJawIn
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 312
+    shapeName: Genesis2Female__PHMHappy
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 313
+    shapeName: Genesis2Female__PHMGlare
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 314
+    shapeName: Genesis2Female__PHMFrown
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 315
+    shapeName: Genesis2Female__PHMFlirtingMasculineR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 316
+    shapeName: Genesis2Female__PHMFlirtingFeminineR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 317
+    shapeName: Genesis2Female__PHMFlirtingFeminineL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 318
+    shapeName: Genesis2Female__PHMFear
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 319
+    shapeName: Genesis2Female__PHMEyesSquintR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 320
+    shapeName: Genesis2Female__PHMEyesSquintL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 321
+    shapeName: Genesis2Female__PHMEyesClosedR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 322
+    shapeName: Genesis2Female__PHMEyesClosedL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 323
+    shapeName: Genesis2Female__PHMEyeLidsTopUpR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 324
+    shapeName: Genesis2Female__PHMEyeLidsTopUpL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 325
+    shapeName: Genesis2Female__PHMEyelidsTopDownR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 326
+    shapeName: Genesis2Female__PHMEyelidsTopDownL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 327
+    shapeName: Genesis2Female__PHMEyeLidsBottomUpR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 328
+    shapeName: Genesis2Female__PHMEyeLidsBottomUpL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 329
+    shapeName: Genesis2Female__PHMEyeLidsBottomDownR
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 330
+    shapeName: Genesis2Female__PHMEyeLidsBottomDownL
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 331
+    shapeName: Genesis2Female__PHMExcitement
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 332
+    shapeName: Genesis2Female__PHMDisgust
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 333
+    shapeName: Genesis2Female__PHMContempt
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 334
+    shapeName: Genesis2Female__PHMConfused
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 335
+    shapeName: Genesis2Female__PHMCheeksBalloonPucker
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 336
+    shapeName: Genesis2Female__PHMCheeksBalloon
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 337
+    shapeName: Genesis2Female__PHMBrowInnerUpR
+    overrideOn: 0
+    notRandom: 0
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 338
+    shapeName: Genesis2Female__PHMBrowInnerUpL
+    overrideOn: 0
+    notRandom: 0
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 339
+    shapeName: Genesis2Female__PHMBrowInnerDownR
+    overrideOn: 0
+    notRandom: 0
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 340
+    shapeName: Genesis2Female__PHMBrowInnerDownL
+    overrideOn: 0
+    notRandom: 0
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 341
+    shapeName: Genesis2Female__PHMBrowDownR
+    overrideOn: 0
+    notRandom: 0
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 342
+    shapeName: Genesis2Female__PHMBrowDownL
+    overrideOn: 0
+    notRandom: 0
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 343
+    shapeName: Genesis2Female__PHMAngry
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  - shapeIndex: 344
+    shapeName: Genesis2Female__PHMAfraid
+    overrideOn: 0
+    notRandom: 1
+    isOn: 0
+    blendSpeed: 5
+    rangeOfMotion: 100
+  randomCustomShapes: 1
+  maxCustomShapeInterval: 3
+  randomCSBlendSpeedMin: 0.75
+  randomCSBlendSpeedMax: 2
+  randomCSRangeOfMotionMin: 10
+  randomCSRangeOfMotionMax: 12.413794
+  randomCSDurationMin: 0.25
+  randomCSDurationMax: 2.5
+  csNotRandomToggle: 0
+  useCustomShapesOnly: 1
+  showEyeShapes: 1
+  showTracking: 1
+  showEyeProps: 1
+  showCustom: 1
+  showBroadcast: 1
+  showBroadcastCS: 1
+  expandShapeGroups: 0
+  groups: []
+  shapeGroupCount: 0
+  targetAffinityPrev: 0
+--- !u!114 &1003273950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003273944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1624661579, guid: 7a255d2e87aae364fbd819c455094253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salsa3D: {fileID: 0}
+  skinnedMeshRenderer: {fileID: 0}
+  prevSkinnedMeshRenderer: {fileID: 0}
+  getSkndMshRndr: 0
+  blendShapes: []
+  lookUpIndex: 0
+  lookDownIndex: 0
+  lookLeftIndex: 0
+  lookRightIndex: 0
+  blinkIndex: 0
+  lookPosition: 4
+  lookAmount:
+    lookUp: 0
+    lookDown: 0
+    lookLeft: 0
+    lookRight: 0
+    blink: 0
+  randomEyes: 1
+  maxRandomInterval: 3
+  blendSpeed: 8
+  rangeOfMotion: 33.5
+  blinkDuration: 0.03
+  blinkSpeed: 30
+  openMax: 5
+  closeMax: 100
+  eyePosition: {fileID: 1868232954}
+  eyePosVerify: {fileID: 1868232954}
+  lookTarget: {fileID: 1709202764}
+  lookSensitivity: 4
+  targetAffinity: 1
+  targetAffinityPercentage: 0.765
+  invertTracking: 0
+  trackBehind: 0
+  blink: 1
+  maxBlinkInterval: 5
+  broadcast: 0
+  broadcastReceiversCount: 0
+  prevBroadcastReceiversCount: 0
+  expandBroadcast: 0
+  broadcastReceivers: []
+  propagateToChildren: 0
+  broadcastNeeded: 0
+  broadcastCS: 0
+  broadcastCSReceiversCount: 0
+  prevBroadcastCSReceiversCount: 0
+  expandBroadcastCS: 0
+  broadcastCSReceivers: []
+  propagateToChildrenCS: 0
+  selectedCustomShape: 0
+  noneShapeIndex: 0
+  excludeEyeShapes: 1
+  dynamicCustomShapes: []
+  customShapeCount: 0
+  expandCustomShapes: 0
+  customShapes: []
+  randomCustomShapes: 1
+  maxCustomShapeInterval: 3
+  randomCSBlendSpeedMin: 0.75
+  randomCSBlendSpeedMax: 2
+  randomCSRangeOfMotionMin: 10
+  randomCSRangeOfMotionMax: 40
+  randomCSDurationMin: 0.25
+  randomCSDurationMax: 2.5
+  csNotRandomToggle: 0
+  useCustomShapesOnly: 0
+  showEyeShapes: 1
+  showTracking: 1
+  showEyeProps: 1
+  showCustom: 1
+  showBroadcast: 1
+  showBroadcastCS: 1
+  expandShapeGroups: 0
+  groups: []
+  shapeGroupCount: 0
+  targetAffinityPrev: 0
+--- !u!114 &1003273951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003273944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086aa45a665c6d34d86aa75883fc5ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mcs: {fileID: 1003273948}
+  myAudioClip: {fileID: 0}
+  myAudioClip2: {fileID: 0}
+  playing: 0
+  started: 0
+  waiting: 0
+  destroyed: 0
+--- !u!82 &1003273952
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003273944}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!1 &1131263143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1131263146}
+  m_Layer: 0
+  m_Name: GameMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131263146
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131263143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65044403, y: -0.095226765, z: -0.66868466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1536796145
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.074630655
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9972113
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95256513274734214, guid: ca6ddcb4b1dc9574f8a907a314e37be7,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+    - target: {fileID: 4867542417919456, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 8.56
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ca6ddcb4b1dc9574f8a907a314e37be7, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1600564574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1600564576}
+  - component: {fileID: 1600564575}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1600564575
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600564574}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 1
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1600564576
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600564574}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 4.23, z: 0.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!1 &1709202764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1709202769}
+  - component: {fileID: 1709202768}
+  - component: {fileID: 1709202767}
+  - component: {fileID: 1709202766}
+  - component: {fileID: 1709202765}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1709202765
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709202764}
+  m_Enabled: 1
+--- !u!124 &1709202766
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709202764}
+  m_Enabled: 1
+--- !u!92 &1709202767
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709202764}
+  m_Enabled: 1
+--- !u!20 &1709202768
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709202764}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1709202769
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1709202764}
+  m_LocalRotation: {x: -0, y: 0.9985077, z: -0.054612093, w: 0}
+  m_LocalPosition: {x: 0, y: 1.711, z: 0.72}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 6.261, y: 180.00002, z: 0}
+--- !u!4 &1754346097 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4878014577175090, guid: ca6ddcb4b1dc9574f8a907a314e37be7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536796145}
+--- !u!1 &1837231101 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1796973282407666, guid: ca6ddcb4b1dc9574f8a907a314e37be7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536796145}
+--- !u!1 &1868232954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1868232955}
+  - component: {fileID: 1868232956}
+  m_Layer: 0
+  m_Name: RandomEyes3D_Eye_Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1868232955
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868232954}
+  m_LocalRotation: {x: -1.7347235e-18, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.05827502, z: 0.07854562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1754346097}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1868232956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868232954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -818653955, guid: 7a255d2e87aae364fbd819c455094253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGizmo: 1
+--- !u!137 &1879996495 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 137141195045216436, guid: ca6ddcb4b1dc9574f8a907a314e37be7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536796145}
+--- !u!1 &1892088026 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1419617097746326, guid: ca6ddcb4b1dc9574f8a907a314e37be7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536796145}
