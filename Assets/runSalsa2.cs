@@ -73,7 +73,7 @@ public class runSalsa2 : MonoBehaviour {
             playing = true;
             salsa3D.Play();
         }
-        if (destroyed && !salsa3D)
+        if (destroyed && !salsa3D && !making)
         {
             Debug.Log("waiting for new");
             DateTime newTime = File.GetLastWriteTimeUtc(clipDir);

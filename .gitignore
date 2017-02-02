@@ -4,7 +4,7 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
-
+/Assets/MORPH3D
 # Visual Studio 2015 cache directory
 /.vs/
 
