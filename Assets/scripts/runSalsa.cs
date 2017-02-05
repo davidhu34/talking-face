@@ -42,9 +42,9 @@ public class runSalsa : MonoBehaviour {
         salsa3D.SetAudioClip(myAudioClip); // Set AudioClip
                                            // Or set the AudioClip from a clip in any Resources folder
                                            //salsa3D.SetAudioClip((Resources.Load("EthanEcho0", typeof(AudioClip)) as AudioClip));
-        salsa3D.saySmallTrigger = 0.002f; // Set the saySmall amplitude trigger
-        salsa3D.sayMediumTrigger = 0.004f; // Set the sayMedium amplitude trigger
-        salsa3D.sayLargeTrigger = 0.005f; // Set the sayLarge amplitude trigger
+        salsa3D.saySmallTrigger = 0.001f; // Set the saySmall amplitude trigger
+        salsa3D.sayMediumTrigger = 0.002f; // Set the sayMedium amplitude trigger
+        salsa3D.sayLargeTrigger = 0.004f; // Set the sayLarge amplitude trigger
         salsa3D.audioUpdateDelay = 0.05f; // Set the amplitutde sample update delay
         salsa3D.blendSpeed = 10f; // Set the blend speed
         salsa3D.rangeOfMotion = 100f; // Set the range of motion
