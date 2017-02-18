@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Windows;
 
 using CrazyMinnow.SALSA; // Import SALSA from the CrazyMinnow namespace
@@ -18,11 +19,16 @@ public class runSalsa : MonoBehaviour {
     public AudioClip myAudioClip2;
     public WWW www;
     public WWW www2;
+    public WWW txtfile;
     public bool playing = false;
     public bool started = false;
     public bool waiting = false;
     public bool destroyed = false;
     private Salsa3D salsa3D;
+    public Animator anim;
+    public RandomEyes3D eyes;
+    public GameObject cam;
+    public Text answer;
 
     void makeSalsa() {
         Debug.Log("make");
@@ -55,6 +61,16 @@ public class runSalsa : MonoBehaviour {
     void Start () {
         clipDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/" + clipName;
         oldTime = File.GetLastWriteTimeUtc(clipDir);
+        String txtDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/text.txt";
+        txtfile = new WWW("file://" + txtDir);
+        while (!txtfile.isDone) { };
+        Debug.Log(txtfile.bytes);
+        char ucode = '\u4e2d';
+
+        answer.text = "\u4e2d\u4e2d";
+        anim = GetComponent<Animator>();
+        eyes = GetComponent<RandomEyes3D>();
+        eyes.SetLookTarget(cam);
 
         makeSalsa();
     }
@@ -65,6 +81,7 @@ public class runSalsa : MonoBehaviour {
         {
             Debug.Log("Play");
             salsa3D.Play();
+            anim.SetBool("talking", true);
             playing = true;
 
         }
@@ -90,6 +107,7 @@ public class runSalsa : MonoBehaviour {
             waiting = false;
             Destroy(salsa3D);
             destroyed = true;
+            anim.SetBool("talking", false);
         }
     }
 }
