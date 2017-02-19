@@ -24,6 +24,7 @@ public class runSalsa : MonoBehaviour {
     public bool started = false;
     public bool waiting = false;
     public bool destroyed = false;
+    public bool making = false;
     private Salsa3D salsa3D;
     public Animator anim;
     public RandomEyes3D eyes;
@@ -54,6 +55,8 @@ public class runSalsa : MonoBehaviour {
         salsa3D.audioUpdateDelay = 0.05f; // Set the amplitutde sample update delay
         salsa3D.blendSpeed = 10f; // Set the blend speed
         salsa3D.rangeOfMotion = 100f; // Set the range of motion
+        making = false;
+        destroyed = false;
         waiting = true;
     }
     // Use this for initialization
@@ -85,7 +88,7 @@ public class runSalsa : MonoBehaviour {
             playing = true;
 
         }
-        if (destroyed && !salsa3D) 
+        if (destroyed && !salsa3D && !making) 
         {
             Debug.Log("waiting for new");
             DateTime newTime = File.GetLastWriteTimeUtc(clipDir);
@@ -94,7 +97,7 @@ public class runSalsa : MonoBehaviour {
                 Debug.Log("oldyime"+oldTime);
                 oldTime = newTime;
                 Debug.Log("newtime"+oldTime);
-                destroyed = false;
+                making = true;
                 makeSalsa();
             }
         }
