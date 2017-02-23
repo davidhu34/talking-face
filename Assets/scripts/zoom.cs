@@ -14,6 +14,7 @@ public class zoom : MonoBehaviour {
         if (Input.GetAxis("Mouse ScrollWheel") < transform.position.z - 0.5)
         {
             transform.Translate(Vector3.forward * Input.GetAxis("Mouse ScrollWheel"));
+            transform.Translate(Vector3.up * Input.GetAxis("Mouse ScrollWheel") * 7 / 40);
         }
     }
 }

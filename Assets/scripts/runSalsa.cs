@@ -14,6 +14,7 @@ public class runSalsa : MonoBehaviour {
 
     private string clipName = "dialog.wav";
     private string clipDir;
+    private string txtDir;
     public DateTime oldTime;
     public AudioClip myAudioClip;
     public AudioClip myAudioClip2;
@@ -30,14 +31,15 @@ public class runSalsa : MonoBehaviour {
     public RandomEyes3D eyes;
     public GameObject cam;
     public Text answer;
+    public GameObject debugAC;
 
-    void makeSalsa() {
+    void makeSalsa( string name) {
         Debug.Log("make");
-        www = new WWW("file://" + clipDir);
+        www = new WWW("file://" + clipDir+name);
         myAudioClip = www.audioClip;
-        Debug.Log(myAudioClip.isReadyToPlay);
+        //Debug.Log(myAudioClip.isReadyToPlay);
         while (!www.isDone) ;
-
+        debugAC.GetComponent<AudioSource>().clip = myAudioClip;
         Debug.Log(myAudioClip.isReadyToPlay);
         // Salsa3D
         gameObject.AddComponent<Salsa3D>(); // Add a Salsa3D component
@@ -62,20 +64,19 @@ public class runSalsa : MonoBehaviour {
     // Use this for initialization
     [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
     void Start () {
-        clipDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/" + clipName;
-        oldTime = File.GetLastWriteTimeUtc(clipDir);
-        String txtDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/text.txt";
+        clipDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/lib/wavs/";
+        //clipDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/wavs/";
+        txtDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/wavname.txt";
+        oldTime = File.GetLastWriteTimeUtc(txtDir);
         txtfile = new WWW("file://" + txtDir);
         while (!txtfile.isDone) { };
-        Debug.Log(txtfile.bytes);
         char ucode = '\u4e2d';
 
-        answer.text = "\u4e2d\u4e2d";
         anim = GetComponent<Animator>();
         eyes = GetComponent<RandomEyes3D>();
         eyes.SetLookTarget(cam);
 
-        makeSalsa();
+        makeSalsa(txtfile.text);
     }
     // Update is called once per frame
     void Update()
@@ -90,15 +91,17 @@ public class runSalsa : MonoBehaviour {
         }
         if (destroyed && !salsa3D && !making) 
         {
-            Debug.Log("waiting for new");
-            DateTime newTime = File.GetLastWriteTimeUtc(clipDir);
+            //Debug.Log("waiting for new");
+            DateTime newTime = File.GetLastWriteTimeUtc(txtDir);
             if (oldTime != newTime)
             {
                 Debug.Log("oldyime"+oldTime);
                 oldTime = newTime;
                 Debug.Log("newtime"+oldTime);
                 making = true;
-                makeSalsa();
+                txtfile = new WWW("file://" + txtDir);
+                while (!txtfile.isDone) { };
+                makeSalsa(txtfile.text);
             }
         }
     }
