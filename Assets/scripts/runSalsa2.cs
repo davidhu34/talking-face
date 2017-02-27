@@ -20,8 +20,7 @@ public class runSalsa2 : MonoBehaviour {
 	public WWW www;
 	public WWW txtfile;
 	public bool playing = false;
-	public bool started = false;
-	public bool destroyed = false;
+	public bool destroyed;
 	public bool making = false;
 	private Salsa3D salsa3D;
 	public Animator anim;
@@ -47,9 +46,9 @@ public class runSalsa2 : MonoBehaviour {
         salsa3D.SetAudioClip(myAudioClip); // Set AudioClip
                                            // Or set the AudioClip from a clip in any Resources folder
                                            //salsa3D.SetAudioClip((Resources.Load("EthanEcho0", typeof(AudioClip)) as AudioClip));
-        salsa3D.saySmallTrigger = 0.001f; // Set the saySmall amplitude trigger
-        salsa3D.sayMediumTrigger = 0.002f; // Set the sayMedium amplitude trigger
-        salsa3D.sayLargeTrigger = 0.004f; // Set the sayLarge amplitude trigger
+        salsa3D.saySmallTrigger = 0.0005f; // Set the saySmall amplitude trigger
+        salsa3D.sayMediumTrigger = 0.001f; // Set the sayMedium amplitude trigger
+        salsa3D.sayLargeTrigger = 0.002f; // Set the sayLarge amplitude trigger
         salsa3D.audioUpdateDelay = 0.05f; // Set the amplitutde sample update delay
         salsa3D.blendSpeed = 10f; // Set the blend speed
         salsa3D.rangeOfMotion = 100f; // Set the range of motion
@@ -60,6 +59,7 @@ public class runSalsa2 : MonoBehaviour {
     [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
     void Start()
     {
+		destroyed = true;
 		clipDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/lib/wavs/";
 		//clipDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/wavs/";
 		txtDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/wavname.txt";
@@ -77,6 +77,7 @@ public class runSalsa2 : MonoBehaviour {
         if (!playing && !destroyed)
         {
             Debug.Log("Play");
+			Debug.Log(destroyed);
             playing = true;
 			anim.SetBool("talking", true);
             salsa3D.Play();
