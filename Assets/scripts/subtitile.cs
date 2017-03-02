@@ -11,13 +11,14 @@ using UnityEngine.Windows;
 
 
 public class subtitile : MonoBehaviour {
+	public string name;
 	private string txtDir;
-	public Text cc;
+	private Text cc;
 	private WWW txtFile;
 	private DateTime oldTime;
 	// Use this for initialization
 	void Start () {
-		txtDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/subtitile.txt";
+		txtDir = Application.dataPath.Substring(0, Application.dataPath.LastIndexOf("/")) + "/"+name+".txt";
 		oldTime = File.GetLastWriteTimeUtc (txtDir);
 		cc = gameObject.GetComponent<Text> ();
 	}
